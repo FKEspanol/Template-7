@@ -1,36 +1,15 @@
 ---
-import Navbar from '../components/layoutComponents/Navbar.astro';
-import Footer from "../components/layoutComponents/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from '../constants';
-
+import Layout from './layout.astro'
+import Navbar from '../components/layoutComponents/Navbar.astro'
+import Footer from '../components/layoutComponents/Footer.astro'
+import MainHero from '../components/layoutComponents/MainHero.astro'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={SITE_DESCRIPTION} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <title>{SITE_TITLE}</title>
-  </head>
-  <body>
-    <Navbar />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-  </body>
-</html>
-
-<style is:global>
-  .cust-container {
-    @apply w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]  mx-auto px-4;
-  }
-</style>
+<Layout>
+  <Navbar />
+  <MainHero />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</Layout>
