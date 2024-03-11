@@ -2,4 +2,101 @@
 import Section from "../layoutComponents/Section.astro";
 ---
 
-<Section></Section>
+<Section className="relative bg-[url('/images/testimonials-bg.jpg')] bg-cover bg-center before:absolute before:inset-0 before:bg-primary before:bg-opacity-60">
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="text-center text-white">
+            <div class="p-1 bg-slate-300 w-20 h-20 rounded-full mx-auto mb-4">
+              <img src="/images/testimonials/donya.jpg" alt="" class="w-full h-full object-cover rounded-full">
+            </div>
+            <h4 class="text-2xl font-bold">Donya Tesoro</h4>
+            <p class="font-semibold mb-8">Freelancer</p>
+            <p class="italic w-full lg:w-4/5 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, molestiae distinctio neque accusamus similique provident saepe nobis non dolores alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam!</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="text-center text-white">
+            <div class="p-1 bg-slate-300 w-20 h-20 rounded-full mx-auto mb-4">
+              <img src="/images/testimonials/gwen.jpg" alt="" class="w-full h-full object-cover rounded-full">
+            </div>
+            <h4 class="text-2xl font-bold">Gwen Soriano</h4>
+            <p class="font-semibold mb-8">Designer</p>
+            <p class="italic w-full lg:w-4/5 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, molestiae distinctio neque accusamus similique provident saepe nobis non dolores alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam!</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="text-center text-white">
+            <div class="p-1 bg-slate-300 w-20 h-20 rounded-full mx-auto mb-4">
+              <img src="/images/testimonials/colleene.jpg" alt="" class="w-full h-full object-cover rounded-full">
+            </div>
+            <h4 class="text-2xl font-bold">Colleene Ferrer</h4>
+            <p class="font-semibold mb-8">Architect</p>
+            <p class="italic w-full lg:w-4/5 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, molestiae distinctio neque accusamus similique provident saepe nobis non dolores alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam!</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="text-center text-white">
+            <div class="p-1 bg-slate-300 w-20 h-20 rounded-full mx-auto mb-4">
+              <img src="/images/testimonials/melanie.jpg" alt="" class="w-full h-full object-cover rounded-full">
+            </div>
+            <h4 class="text-2xl font-bold">Melanie Angeles</h4>
+            <p class="font-semibold mb-8">Model</p>
+            <p class="italic w-full lg:w-4/5 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, molestiae distinctio neque accusamus similique provident saepe nobis non dolores alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam!</p>
+          </div>
+        </div>
+        
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination relative mt-5"></div>
+    
+      <!-- If we need navigation buttons -->
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+    
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+  </div>
+</Section>
+
+
+
+<script is:inline src="/js/swiper-bundle.min.js"></script>
+<script is:inline>
+
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    bulletActiveClass: "swiper-pagination-bullet-active bg-white",
+  },
+
+  autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
+
+</script>
