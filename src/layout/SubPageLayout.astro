@@ -1,0 +1,17 @@
+---
+import Layout from './layout.astro'
+import Navbar from '../components/layoutComponents/Navbar.astro'
+import Footer from '../components/layoutComponents/Footer.astro'
+import SubHero from '../components/layoutComponents/SubHero.astro'
+
+const { pageName } = Astro.props
+---
+
+<Layout>
+  <Navbar />
+  <SubHero pageName={pageName} />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</Layout>
