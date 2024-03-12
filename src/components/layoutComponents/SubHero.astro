@@ -8,7 +8,9 @@ const { pageName } = Astro.props
   >
     <div class="cust-container">
       <div class="text-center text-white">
-        <h1 class="text-5xl font-bold text-white mb-4 leading-tight">About</h1>
+        <h1 class="text-5xl font-bold text-white mb-4 leading-tight">
+          {pageName}
+        </h1>
         <p class="leading-6 lg:w-4/5 lg:mx-auto">
           Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo
           odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum
@@ -18,7 +20,7 @@ const { pageName } = Astro.props
       </div>
     </div>
   </div>
-  <nav class="py-5 bg-[#F3F6FC]">
+  <nav class="py-5 bg-[#d1d1d1]">
     <div class="cust-container">
       <ol class="flex">
         <li class="text-primary font-semibold">Home /</li>
