@@ -3,29 +3,31 @@ const { pageName } = Astro.props
 ---
 
 <section id="subHero">
-  <div
-    class="relative w-full min-h-[40vh] bg-[url('/images/hero-bg.png')] bg-cover bg-center bg-no-repeat bg-primary after:absolute after:inset-0 after:bg-black after:bg-opacity-10 flex items-center"
-  >
-    <div class="cust-container">
-      <div class="text-center text-white">
-        <h1 class="text-5xl font-bold text-white mb-4 leading-tight">
-          {pageName}
-        </h1>
-        <p class="leading-6 lg:w-4/5 lg:mx-auto">
-          Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo
-          odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum
-          debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum
-          dolorem.
-        </p>
-      </div>
+    <div
+        class="relative w-full h-[50vh] md:h-[40vh] bg-[url('/images/hero-bg.png')] bg-cover bg-center bg-no-repeat bg-primary after:absolute after:inset-0 after:bg-black after:bg-opacity-10 flex items-center"
+    >
+        <div class="cust-container">
+            <div class="text-center text-white">
+                <h1
+                    class="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight"
+                >
+                    {pageName}
+                </h1>
+                <p class="leading-6 lg:w-4/5 lg:mx-auto text-sm lg:text-[16px]">
+                    Odio et unde deleniti. Deserunt numquam exercitationem.
+                    Officiis quo odio sint voluptas consequatur ut a odio
+                    voluptatem. Sit dolorum debitis veritatis natus dolores.
+                    Quasi ratione sint. Sit quaerat ipsum dolorem.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <nav class="py-5 bg-[#d1d1d1]">
-    <div class="cust-container">
-      <ol class="flex">
-        <li class="text-primary font-semibold">Home /</li>
-        <li class="font-semibold">{pageName}</li>
-      </ol>
-    </div>
-  </nav>
+    <nav class="py-5 bg-[#d1d1d1]">
+        <div class="cust-container">
+            <ol class="flex">
+                <li class="text-primary font-semibold">Home /</li>
+                <li class="font-semibold">{pageName}</li>
+            </ol>
+        </div>
+    </nav>
 </section>
