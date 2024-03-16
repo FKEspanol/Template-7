@@ -1,9 +1,10 @@
 ---
-title: 'Packaging Services'
+title: 'Packaging'
 sub_heading: 'because they lacked opposable thumbs and the brainpower to build a space program.'
 author: 'Gwen Soriano'
 pubdate: 2024-02-20
 img: '/images/packaging-service.jpg'
+supporting_text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. At libero facere voluptatibus deserunt soluta quod! Impedit laborum ipsum quas neque quisquam tempore error aut dolore.'
 slug: 'packaging-services'
 ---
 

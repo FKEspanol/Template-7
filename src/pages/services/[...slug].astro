@@ -1,0 +1,44 @@
+---
+import SubPageLayout from '../../layout/SubPageLayout.astro'
+import Section from '../../components/layoutComponents/Section.astro'
+import SectionHeader from '../../components/layoutComponents/sectionHeader.astro'
+
+import { formatDate } from '../../utils'
+import { getCollection, type CollectionEntry } from 'astro:content'
+
+export async function getStaticPaths() {
+    const servicesBlog: CollectionEntry<'services'>[] =
+        await getCollection('services')
+    return servicesBlog.map((entry) => ({
+        params: {
+            slug: entry.slug,
+        },
+
+        props: { entry },
+    }))
+}
+
+const { entry } = Astro.props
+const { title, sub_heading, author, pubdate, img } = entry.data
+const { Content } = await entry.render()
+---
+
+<SubPageLayout pageName={title}>
+    <Section>
+        <SectionHeader>
+            {title + ' ' + 'Services'}
+        </SectionHeader>
+        <div class="w-full">
+            <img src={img} alt="" class="mb-8" />
+            <div class="mb-5">
+                <h3 class="text-3xl font-bold text-primary mb-1">
+                    {sub_heading}
+                </h3>
+                <p class="text-sm text-smoke">
+                    Posted by <strong>{author}</strong> on {formatDate(pubdate)}
+                </p>
+            </div>
+            <Content />
+        </div>
+    </Section>
+</SubPageLayout>
